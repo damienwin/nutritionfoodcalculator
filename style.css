@@ -54,8 +54,8 @@
 .quiz-btn{
     display: incline-block;
     text-decoration: none;
-    color: black;
-    Border: 1px solid #000000;
+    color: white;
+    Border: 1px solid white;
     padding: 12px 34px;
     font-size: 13px;
     background: transparent;
@@ -64,9 +64,9 @@
 }
 .quiz-btn:hover{
     border: 1px soild #f44336;
-    background: rgb(30, 143, 180);
+    background: rgb(180, 115, 30);
     transition: .5s;
-    color: black;
+    color: white;
 
 
 }
@@ -74,7 +74,7 @@
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 h1{
     font-size: 36px;
@@ -100,10 +100,18 @@ p{
     box-sizing: border-box;
 }
 .quiz-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px 0px rgb(255, 255, 255);
 }
 h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
+}
+.banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.5),#003590),url(Images/doctor.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    
+
 }
