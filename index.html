@@ -1,109 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Utility</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #timer-container {
+            text-align: center;
+        }
+
+        .timer {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 300px;
+            margin: 0 auto;
+            transition: transform 0.2s ease-in-out;
+            position: relative;
+        }
+
+        .timer:hover {
+            transform: scale(1.05);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        p {
+            margin: 10px 0 0;
+            color: #555;
+        }
+
+        .clock-hand {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: 100% 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            width: 2px;
+            height: 50%;
+            background-color: #3498db;
+            animation: rotateClock 1s linear infinite;
+        }
+
+        @keyframes rotateClock {
+            from {
+                rotate: 0deg;
+            }
+            to {
+                rotate: -360deg;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">Gourmet au Catering</a>
-    <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    </div>
-  </div>
-</div>
+    <div id="timer-container">
+        <div class="timer" id="timer1">
+            <div class="clock-hand" id="clockHand1"></div>
+            <label for="duration1">Timer 1 Duration (in seconds):</label>
+            <input type="number" id="duration1" placeholder="Enter duration">
+            <button onclick="startTimer('timer1')">Start Timer 1</button>
+            <button onclick="stopTimer('timer1')">Stop Timer 1</button>
+            <p>Time left: <span id="timeLeft1">0</span> seconds</p>
+        </div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Le Catering</h1>
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
-
-  <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+        <div class="timer" id="timer2">
+            <div class="clock-hand" id="clockHand2"></div>
+            <label for="duration2">Timer 2 Duration (in seconds):</label>
+            <input type="number" id="duration2" placeholder="Enter duration">
+            <button onclick="startTimer('timer2')">Start Timer 2</button>
+            <button onclick="stopTimer('timer2')">Stop Timer 2</button>
+            <p>Time left: <span id="timeLeft2">0</span> seconds</p>
+        </div>
     </div>
 
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">About Catering</h1><br>
-      <h5 class="w3-center">Tradition since 1889</h5>
-      <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-      <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-  
-  <hr>
-  
-  <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="menu">
-    <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Our Menu</h1><br>
-      <h4>Bread Basket</h4>
-      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
-    
-      <h4>Honey Almond Granola with Fruits</h4>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-    
-      <h4>Belgian Waffle</h4>
-      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
-    
-      <h4>Scrambled eggs</h4>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-    
-      <h4>Blueberry Pancakes</h4>
-      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>    
-    </div>
-    
-    <div class="w3-col l6 w3-padding-large">
-      <img src="/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
-    </div>
-  </div>
+    <script>
+        const timers = {};
 
-  <hr>
+        function startTimer(timerId) {
+            const durationInput = document.getElementById(`duration${timerId.charAt(timerId.length - 1)}`);
+            const timeLeftSpan = document.getElementById(`timeLeft${timerId.charAt(timerId.length - 1)}`);
+            const clockHand = document.getElementById(`clockHand${timerId.charAt(timerId.length - 1)}`);
+            const duration = parseInt(durationInput.value, 10);
 
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-64" id="contact">
-    <h1>Contact</h1><br>
-    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
-    <p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
-    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
-    </form>
-  </div>
-  
-<!-- End page content -->
-</div>
+            if (isNaN(duration) || duration <= 0) {
+                alert('Please enter a valid duration greater than 0.');
+                return;
+            }
 
-<!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+            if (timers[timerId]) {
+                alert('Timer is already running.');
+                return;
+            }
+
+            const endTime = Date.now() + duration * 1000;
+
+            timers[timerId] = setInterval(() => {
+                const timeLeft = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
+                timeLeftSpan.textContent = timeLeft;
+
+                const rotation = ((duration - timeLeft) / duration) * 360;
+                clockHand.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+
+                if (timeLeft === 0) {
+                    clearInterval(timers[timerId]);
+                    timers[timerId] = null;
+                    alert(`Timer ${timerId.charAt(timerId.length - 1)} expired!`);
+                }
+            }, 1000);
+
+            timeLeftSpan.textContent = duration;
+        }
+
+        function stopTimer(timerId) {
+            if (timers[timerId]) {
+                clearInterval(timers[timerId]);
+                timers[timerId] = null;
+                const timeLeftSpan = document.getElementById(`timeLeft${timerId.charAt(timerId.length - 1)}`);
+                timeLeftSpan.textContent = 0;
+                const clockHand = document.getElementById(`clockHand${timerId.charAt(timerId.length - 1)}`);
+                clockHand.style.transform = 'translate(-50%, -50%) rotate(0deg)';
+            } else {
+                alert('Timer is not running.');
+            }
+        }
+    </script>
 
 </body>
 </html>
