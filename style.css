@@ -12,28 +12,6 @@
     position: relative;
 }
 
-/* navs{
-   display: flex;
-   padding: 2% 6%;
-   justify-content: space-between;
-   align-items: center;
-} */
-/* .navs-links{
-    flex: 1;
-    text-align: right;
-}
-.navs-link ul li{
-    list-style-type: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.navs-link ul li a{
-    color: #0000;
-    text-decoration: none;
-    font-size: 13px;
-} */
-
 .blue {
     color: blue !important;
 }
