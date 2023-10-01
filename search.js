@@ -28,7 +28,7 @@ function getNutritionValue() {
         tc+=c;
         tf+=f;
         const totalParagraph = document.getElementById("total");
-        totalParagraph.textContent = '|TOTAL| Calories: ' + tcal + ' Protein: ' + tp + ' Carbs: ' + tc + ' Fat: ' + tf;
+        totalParagraph.textContent = '|TOTAL| Calories: ' + tcal.toFixed(1) + ' Protein: ' + tp.toFixed(1) + ' Carbs: ' + tc.toFixed(1) + ' Fat: ' + tf.toFixed(1);
     })  
     .catch(err => {
         console.log(err)
