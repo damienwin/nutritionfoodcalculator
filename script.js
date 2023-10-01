@@ -33,7 +33,7 @@ $(document).one('pageinit', function(){
         localStorage.removeItem('runs');
 
 
-        $('#stats').html('<p>You have not logged run</p>');
+        $('#stats').html('<p>You have not logged activity</p>');
 
         redirect
         window.location.href =  'home.html';
@@ -45,7 +45,7 @@ $(document).one('pageinit', function(){
 
 
 /*
- * show runs
+ * show activity
 */
 function showRuns(){
 
