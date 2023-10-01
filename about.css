@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.text-box2{
+    width: 90%;
+    color: #fff;
+    position: absoulte;
+    top: 50%;
+    left: 50%;
+    transform: translate(5%,350%);
+    text-align: center;
+}
+.text-box3{
+    width: 90%;
+    color: #000;
+    position: absoulte;
+    top: 50%;
+    left: 50%;
+    transform: translate(5%,600%);
+    text-align: center;
+}
+.text-box2 h1{
+    font-size: 62px;
+}
+.textbox3 h2{
+    font-size: 40px;
+}
+.textbox3 p{
+    font-size: 20px;
+}

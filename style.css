@@ -123,7 +123,7 @@ h3{
     position: absoulte;
     top: 50%;
     left: 50%;
-    transform: translate(5%,250%);
+    transform: translate(5%,300%);
     text-align: center;
 }
 .whatis{
@@ -132,7 +132,7 @@ h3{
     position: absoulte;
     top: 50%;
     left: 50%;
-    transform: translate(5%,400%);
+    transform: translate(5%,180%);
     text-align: center;
 }
 .about h1{
@@ -151,32 +151,12 @@ h3{
 .whatis p{
     font-size: 20px;
 }
-.started{
-    width: 90%;
-    color: #000;
-    position: absoulte;
-    top: 50%;
-    left: 50%;
-    transform: translate(5%,550%);
-    text-align: center;
-}
-.started h1{
+.whatis h2{
     font-size: 40px;
 }
-.started p{
-    font-size: 20px;
-}
-.eating{
-    width: 90%;
-    color: #000;
-    position: absoulte;
-    top: 50%;
-    left: 50%;
-    transform: translate(5%,600%);
-    text-align: center;
-}
-.eating h1{
+.whatis h3{
     font-size: 40px;
+<<<<<<< Updated upstream
 }
 .eating p{
     font-size: 20px;
@@ -189,4 +169,6 @@ h3{
 }
 body{
     background: #e4e9f7;
+=======
+>>>>>>> Stashed changes
 }
