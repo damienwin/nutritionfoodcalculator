@@ -51,7 +51,6 @@
 
 
 }
-<<<<<<< Updated upstream
 .quiz-btn{
     display: incline-block;
     text-decoration: none;
@@ -78,12 +77,13 @@
     padding-top: 50px;
 }
 h1{
-    font-size: 36px;
+    font-size: 60px;
     font-weight: 600;
+    color: #fff;
 }
 p{
-    color: #777;
-    font-size: 14px;
+    color: #fff;
+    font-size: 20px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -95,7 +95,7 @@ p{
 }
 .quiz-col{
     flex-basis: 31%;
-    background: #fff3f3;
+    background: #16234a;
     border-radius: 10px;
     margin-bottom: 5%;
     box-sizing: border-box;
@@ -107,6 +107,7 @@ h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
+    color: #fff;
 }
 .banner{
     background: linear-gradient(rgba(0, 0, 0, 0.5),#003590),url(Images/doctor.jpeg);
@@ -116,7 +117,6 @@ h3{
     
 
 }
-=======
 .about{
     width: 90%;
     color: #fff;
@@ -181,4 +181,12 @@ h3{
 .eating p{
     font-size: 20px;
 }
->>>>>>> Stashed changes
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+body{
+    background: #e4e9f7;
+}

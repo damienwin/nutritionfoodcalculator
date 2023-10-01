@@ -25,9 +25,6 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Activity Tracker</a>
-                      </li>
-                    <li class="nav-item">
                         <a class="nav-link " href="login.html"><b>Login</b></a>
                     </li>
                 </ul>
@@ -42,13 +39,18 @@
         <div class="loginbody">
             <div class="wrapper">
                 <form action="">
-                    <h1>Login</h1>
+                    <h1>Sign Up</h1>
                     <div class="input-box">
                         <input type="text" placeholder="Username" id = "username" required>
+                        <i class='bx bx-user'></i>                  
+                     </div>
+                     <div class="input-box">
+                        <input type="text" placeholder="Email" id = "email" required>
                         <i class='bx bx-user'></i>                    
                     </div>
+        
                     <div class="input-box">
-                        <input type="password" placeholder="Password" id = "password" required>
+                        <input type="password" placeholder = "Password" id ="password" required>
                         <i class='bx bx-lock-alt' ></i>
                     </div>
 
@@ -56,26 +58,11 @@
                         <label><input type="checkbox"> Remember me</label>
                         <a href="#">Forgot password?</a>
                     </div>
-                    <button type="submit" value="Login" class="btn" onclick="auth()">Login</button>
-                    
-                    <script>
-                        function auth(){
-                            var username = document.getElementById("username").value;
-                            var password = document.getElementById("password").value;
-                            if(username == "admin123@gmail.com" && password == "admin123"){
-                                window.location.assign("home.html");
-                                alert("Login Successfully");
-                            }
-                            else{
-                                alert("Invaild Information ");
-                                return;
-                            }
-                        }
-                    </script>
+                    <button type="submit" class="btn">Login</button>
 
                     <div class="register-link">
-                        <p>Dont have an account? 
-                            <a href="signup.html">Register here</a>
+                        <p>Already A Member? 
+                            <a href="login.html">Login</a>
                         </p>
                     </div>
                 </form>
