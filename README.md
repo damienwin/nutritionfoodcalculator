@@ -1,0 +1,1 @@
+Full-stack website created for 2023 LSU Geaux SASE Hackathon. Find out about your fitness and health, and log your diet using the accurate food calculator extracting data from the nutrition label API.
